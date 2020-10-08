@@ -11,15 +11,20 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <div className="grid-container">
-            <header>
-              <Link to="/">React Shopping Cart</Link>
-              <Link to="/admin">Admin</Link>
+            
+            <header >
+              <Link to="/">DimePac - Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Link>
+              <br></br>
+              <header style={{ textAlign: 'right', alignSelf: 'stretch'}}>
+              <a href="#bottom" id="scroll-to-bottom">Checkout</a>
+              </header>
             </header>
+            
             <main>
               <Route path="/admin" component={AdminScreen} />
               <Route path="/" component={HomeScreen} exact />
             </main>
-            <footer>All right is reserved.</footer>
+            <footer id="bottom">Copyright ©2020 DimePac. All rights reserved</footer>
           </div>
         </BrowserRouter>
       </Provider>

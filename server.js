@@ -10,7 +10,7 @@ app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
 mongoose.connect(
-  process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
+  process.env.MONGODB_URL || "mongodb://ssamala:w7cUZqFCFkOWv2GW@cluster0-shard-00-00.d8fd0.mongodb.net:27017,cluster0-shard-00-01.d8fd0.mongodb.net:27017,cluster0-shard-00-02.d8fd0.mongodb.net:27017/react-shopping-card-db?authSource=admin&replicaSet=atlas-7tuubm-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true",
   {
     useNewUrlParser: true,
     useCreateIndex: true,

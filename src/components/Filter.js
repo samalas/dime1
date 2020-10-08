@@ -35,13 +35,10 @@ class Filter extends Component {
               this.props.filterProducts(this.props.products, e.target.value)
             }
           >
-            <option value="">ALL</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
+             <option value="">ALL</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Other">Other</option>
           </select>
         </div>
       </div>

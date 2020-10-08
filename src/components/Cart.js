@@ -53,7 +53,7 @@ class Cart extends Component {
                 x
               </button>
               <div className="order-details">
-                <h3 className="success-message">Your order has been placed.</h3>
+                <h3 className="success-message">Your order has been placed. Please wait for a text on your order status. Use Venmo or Cash at the door when items arrive.</h3>
                 <h2>Order {order._id}</h2>
                 <ul>
                   <li>
@@ -61,7 +61,7 @@ class Cart extends Component {
                     <div>{order.name}</div>
                   </li>
                   <li>
-                    <div>Email:</div>
+                    <div>Phone Number:</div>
                     <div>{order.email}</div>
                   </li>
                   <li>
@@ -74,7 +74,7 @@ class Cart extends Component {
                   </li>
                   <li>
                     <div>Total:</div>
-                    <div>{formatCurrency(order.total)}</div>
+                    <div>{formatCurrency(order.total+1.5)}</div>
                   </li>
                   <li>
                     <div>Cart Items:</div>
@@ -122,9 +122,10 @@ class Cart extends Component {
               <div className="cart">
                 <div className="total">
                   <div>
+                  <img src="https://img.icons8.com/metro/20/000000/delivery.png"/> Fee +
                     Total:{" "}
                     {formatCurrency(
-                      cartItems.reduce((a, c) => a + c.price * c.count, 0)
+                      cartItems.reduce((a, c) => (a + c.price * c.count), 1.5)
                     )}
                   </div>
                   <button
@@ -143,10 +144,10 @@ class Cart extends Component {
                     <form onSubmit={this.createOrder}>
                       <ul className="form-container">
                         <li>
-                          <label>Email</label>
+                          <label>Phone Number</label>
                           <input
                             name="email"
-                            type="email"
+                            type="text"
                             required
                             onChange={this.handleInput}
                           ></input>
@@ -161,7 +162,7 @@ class Cart extends Component {
                           ></input>
                         </li>
                         <li>
-                          <label>Address</label>
+                          <label>Address (including Apt #)</label>
                           <input
                             name="address"
                             type="text"
