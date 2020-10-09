@@ -43,7 +43,7 @@ class Cart extends Component {
         ) : (
           <div className="cart cart-header">
             You have {cartItems.length} in the cart{" "}&nbsp;| 
-            &nbsp;Delivery Fee: $1.50
+            &nbsp;Delivery fee: $1.50
           </div>
         )}
 
