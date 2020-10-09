@@ -15,12 +15,17 @@ class App extends React.Component {
             <header >
               <Link to="/">DimePac - Store (Tax Included)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Link>
               <br></br>
+              
               <header style={{ textAlign: 'right', alignSelf: 'stretch'}}>
               <a href="#bottom" id="scroll-to-bottom">Checkout</a>
               </header>
+              
             </header>
             
+            
             <main>
+            <p><small>&nbsp;1 free snack (up to $3) per customer.</small></p>
+            <p><small>&nbsp;Receive a text for adjusted total after order.</small></p>
               <Route path="/admin" component={AdminScreen} />
               <Route path="/" component={HomeScreen} exact />
             </main>
